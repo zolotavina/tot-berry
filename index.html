@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TotBerry Survey Form</title>
+    <meta charset="UTF-8">
+    <link href="./assets/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    </style>  
+</head>
+
+<body>
+        <!--HEADER-->
+        <header class="header">
+            <h1 id="title">TotBerry Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve our products.</p>
+        </header>
+        <!--FORM-->
+        <form id="survey-form" action="https://x" method="post">
+            <!--NAME, EMAIL, AGE-->
+            <div>
+                <label id="name-label" for="name">Name <input id="name" type="text" placeholder="Enter your name"
+                        required></label>
+                <label id="email-label" for="email">Email <input id="email" type="email" placeholder="Enter your email"
+                        required></label>
+                <label id="number-label" for="number">Age <span class="clue">(optional)</span><input id="number" type="number" min="14" max="99"
+                        placeholder="Enter your age"></label>
+            </div>
+            <!--DROPDOWN QUALITY SATISFACTION-->
+            <div>
+                <label for="dropdown">On a scale of 1-5, how satisfied are you with the quality of our food?
+                    <select id="dropdown">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1 - Very Unsatisfied</option>
+                        <option value="2">2 - Unsatisfied</option>
+                        <option value="3">3 - Neutral</option>
+                        <option value="4">4 - Satisfied</option>
+                        <option value="5">5 - Very Satisfied</option>
+                    </select>
+                </label>
+            </div>
+            <!--CHECKBOX PRODUCTS-->
+            <div>
+                <p>What TotBerry products have you tried? <span class="clue">(Check all that apply)</span></p>
+                <label for="products"><input class="inline" type="checkbox" name="products" value="organic-puree">Organic Puree</label>
+                <label for="products"><input class="inline" type="checkbox" name="products" value="organic-cookies">Organic Cookies</label>
+                <label for="products"><input class="inline" type="checkbox" name="products" value="corn-snacks">Corn Snacks</label>
+                <label for="products"><input class="inline" type="checkbox" name="products" value="oat-bars">Oat Bars</label>
+                <label for="products"><input class="inline" type="checkbox" name="products" value="baby-cereal">Baby Cereal</label>
+            </div>
+            <!--RADIO RECOMMENDATION-->
+            <div>
+                <p>Would you recommend TotBerry to others?</p>
+                <label for="recommendation"><input class="inline" type="radio" name="recommendation" value="definitely"> Definitely</label>
+                <label for="recommendation"><input class="inline" type="radio" name="recommendation" value="maybe"> Maybe</label>
+                <label for="recommendation"><input class="inline" type="radio" name="recommendation" value="not-sure"> Not sure</label>
+            </div>
+            <!--TEXT AREA-->
+            <div>
+                <label for="improve">How could we improve our product to better meet your needs?<textarea name="improve" rows="4" placeholder="Add your comments here"></textarea></label>
+            </div>
+            <!--SUBMIT-->
+            <input type="submit" id="submit" value="SUBMIT">
+        </form>
+</body>
+
+</html>
